@@ -1,0 +1,116 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Luxury Hotel Color Palette */
+  --background: #F8F5F0;
+  --foreground: #1E1E1E;
+  --card: #FFFFFF;
+  --card-foreground: #1E1E1E;
+  --popover: #FFFFFF;
+  --popover-foreground: #1E1E1E;
+  --primary: #C8A96B;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F8F5F0;
+  --secondary-foreground: #1E1E1E;
+  --muted: #E8E4DE;
+  --muted-foreground: #6B6B6B;
+  --accent: #C8A96B;
+  --accent-foreground: #1E1E1E;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8E4DE;
+  --input: #E8E4DE;
+  --ring: #C8A96B;
+  --radius: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.dark {
+  --background: #1E1E1E;
+  --foreground: #F8F5F0;
+  --card: #2A2A2A;
+  --card-foreground: #F8F5F0;
+  --popover: #2A2A2A;
+  --popover-foreground: #F8F5F0;
+  --primary: #C8A96B;
+  --primary-foreground: #1E1E1E;
+  --secondary: #2A2A2A;
+  --secondary-foreground: #F8F5F0;
+  --muted: #3A3A3A;
+  --muted-foreground: #A0A0A0;
+  --accent: #C8A96B;
+  --accent-foreground: #1E1E1E;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #3A3A3A;
+  --input: #3A3A3A;
+  --ring: #C8A96B;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-serif: 'Playfair Display', 'Georgia', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar for luxury feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B89A5C;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
