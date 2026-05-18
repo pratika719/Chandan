@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hotelchandan.com"),
+  metadataBase: new URL("https://www.hotelchandan.com/"),
   title: "Hotel Chandan | Best Business Hotel in Gandhidham, Kutch",
 
   description:

@@ -2,6 +2,23 @@
 import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
+
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "hotelchandan.com",
+          },
+        ],
+        destination: "https://www.hotelchandan.com/:path*",
+        permanent: true,
+      },
+    ]
+  },
+
   async headers() {
     return [
       {
@@ -27,17 +44,17 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value: `
-    default-src 'self';
-    img-src 'self' data: https:;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com;
-    style-src 'self' 'unsafe-inline';
-    font-src 'self' data:;
-    connect-src 'self' https:;
-    frame-src 'self' https://www.google.com https://maps.google.com;
-    frame-ancestors 'self';
-    base-uri 'self';
-    form-action 'self';
-  `
+              default-src 'self';
+              img-src 'self' data: https:;
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com;
+              style-src 'self' 'unsafe-inline';
+              font-src 'self' data:;
+              connect-src 'self' https:;
+              frame-src 'self' https://www.google.com https://maps.google.com;
+              frame-ancestors 'self';
+              base-uri 'self';
+              form-action 'self';
+            `
               .replace(/\n/g, "")
               .trim(),
           },
