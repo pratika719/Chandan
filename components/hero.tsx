@@ -26,10 +26,10 @@ export function Hero() {
         />
 
         {/* Luxury Overlay */}
-        <div className="absolute inset-0 bg-black/45" />
+
 
         {/* Soft Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70" />
+
       </div>
 
       {/* Content */}

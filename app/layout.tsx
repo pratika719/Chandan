@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   description:
     "Hotel Chandan is a premium 3-star business hotel in Gandhidham, Kutch offering elegant rooms, warm hospitality, family dining, and modern comfort for business and leisure travelers.",
 
+  alternates: {
+    canonical: "/",
+  },
+
   keywords: [
     "Hotel Chandan",
     "Hotel in Gandhidham",
