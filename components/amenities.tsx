@@ -70,12 +70,7 @@ const amenities = [
       "Daily housekeeping service for a clean and pleasant stay.",
   },
 
-  {
-    icon: Tv,
-    title: "Cable TV",
-    description:
-      "Entertainment with TV and cable channels in rooms.",
-  },
+  
 ]
 
 const containerVariants = {

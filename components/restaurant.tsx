@@ -99,7 +99,7 @@ export function Restaurant() {
                             "Pure Veg",
                             "Homely Food",
                             "Family Dining",
-                            "Multi Cuisine",
+                            " Cuisine",
                         ].map((tag) => (
                             <div
                                 key={tag}
@@ -148,7 +148,7 @@ export function Restaurant() {
                 transition-all duration-300
               "
                         >
-                            View on Zomato
+                            Order on Zomato
                         </a>
                     </div>
                 </motion.div>
